@@ -8,7 +8,7 @@ class PrintEditionItem {
         this.type=null;
     }
     fix() {
-        this.state=this.state*(15/100);
+        this.state=this.state*1.5;
     }
     set state(value) {
         if (value<0) {
@@ -67,7 +67,7 @@ class Library {
 
     }
     addBook(book) {
-        if (this.state>30)
+        if (book.state>30)
         this.books.push(book);
     }
     findBookBy(type, value) {
